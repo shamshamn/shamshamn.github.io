@@ -1,3 +1,20 @@
-
-            <h1> 表示確認 </h1>
-            <a> 文字確認 </a>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+        <title>WebGazer デモ</title>
+        <script type="text/javascript" src="js/webgazer.js"></script>
+    </head>
+    <body>
+        <script>
+            webgazer.setGazeListener(function(data, elapsedTime) {
+                if (data == null) {
+                    return;
+                }
+                var xprediction = data.x;
+                var yprediction = data.y;
+                console.log(elapsedTime);
+            }).begin();
+        </script>
+    </body>
+</html>
