@@ -10,6 +10,9 @@
         <h1>
             とりあえず表示してくれ--
         </h1>
+
+        <video id="webgazerVideoFeed" autoplay="" style="display: block; position: 
+                                                         fixed; top: 0px; left: 0px; width: 320px; height: 240px; transform: scale(-1, 1);"></video>
         <script>
             webgazer.setGazeListener(function(data, elapsedTime) {
                 if (data == null) {
@@ -20,7 +23,5 @@
                 console.log(elapsedTime);
             }).begin();
         </script>
-        <video id="webgazerVideoFeed" autoplay="" style="display: block; position: fixed; top: 0px; left: 0px; width: 320px; height: 240px; transform: scale(-1, 1);"></video>
-
     </body>
 </html>
